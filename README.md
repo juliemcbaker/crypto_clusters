@@ -23,14 +23,15 @@ PCA(n_components=.90) was specified so 90% of variance would be accounted for by
 * this resulted in a new dataframe (df.shape = 532 x 74)
 
 t-SNE was used & the data was reduced to 2 factors (df.shape = 532 x 2)
-[insert scatterplot]
+
+![t-SNE results](/t_SNE_04Oct21.png)
 
 #### Q: Are there distinct clusters in the t-SNE scatterplot?
 * A: There seems to be 3 very distinct clusters [at approx. (-10, 10), (0, -19), and (40, -10)]. There are a number of smaller clusters throughout where multiple currencies are stacked on top of each other (as can be seen in the areas with the darkest colors). One could maybe argue there is a cluster around (8, 8), but really, that seems like several distinct clusters near each other more than actually being a single group.
 
 ## Cluster Analysis with k-Means
 KMeans analysis was used to test how many clusters could reasonably be expected from the data
-[insert elbow]
+![k-Means elbow](/elbow_04Oct21.png)
 
 ## Recommendation
 I would say the currencies have 4 obvious clusters based on the 2d plot (though there seem to be smaller clusters). Being able to plot in additional dimensions might suggest slightly different results. KMeans elbow plot concurs with the suggestion of 4 distinct clusters in the data. It would be interesting to see if some of the smaller clusters (where a number of values seem to be stacked in very specific locations) have closely related algorithms--if so, that could be an argument to make some of those equivalent groups earlier in the data cleaning process.
